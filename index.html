@@ -1,0 +1,497 @@
+<!--==================================================
+GG PROJECT - index.html
+Autor: Maicon Silveira
+Revisão: correções de bugs (menu mobile, script defer,
+caminhos de imagem, SEO básico) — ver comentários "// FIX"
+====================================================-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GG Project | Paisagismo & Ambiental</title>
+<meta name="description"
+  content="GG Project - Especialistas em Paisagismo, Manejo Ambiental, Jardins Verticais, Plantio de Árvores e Educação Ambiental.">
+<meta name="keywords"
+  content="Paisagismo, Manejo Ambiental, Jardim Vertical, Poda de Árvores, Plantio, Educação Ambiental">
+<meta name="author" content="GG Project">
+
+<!-- FIX: Open Graph para compartilhamento no WhatsApp/Instagram -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="GG Project | Paisagismo & Ambiental">
+<meta property="og:description" content="Soluções completas em Paisagismo, Manejo Ambiental, Jardins Verticais e Plantio de Árvores desde 2017.">
+<meta property="og:image" content="assets/img/logo-gg.png">
+<meta property="og:locale" content="pt_BR">
+
+<!-- FIX: favicon (substitua pelo arquivo real do seu ícone) -->
+<link rel="icon" type="image/png" href="assets/img/logo-gg.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- FIX: "defer" garante que o script só rode depois do HTML ser lido.
+     Antes o script rodava no <head> sem defer e travava (document.querySelector
+     retornava null porque o body ainda não existia). -->
+<script src="assets/js/script.js" defer></script>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container">
+    <a href="#inicio" class="logo">
+      <img src="assets/img/logo-gg.png" alt="GG Project">
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Projetos</a></li>
+        <li><a href="#partners">Parceiros</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <a href="https://wa.me/5511947882608?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" class="btn-header" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i>
+      Solicite um orçamento
+    </a>
+
+    <!-- FIX: esse botão não existia no HTML original, mas o script.js e o
+         CSS mobile já esperavam por ele (.menu-toggle). Sem ele, o menu
+         não abria no celular. -->
+    <div class="menu-toggle" aria-label="Abrir menu" role="button" tabindex="0">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <span>GG PROJECT PAISAGISMO & AMBIENTAL</span>
+      <h1>
+        Plantando qualidade,
+        preservando a natureza.
+      </h1>
+      <p>
+        Desde 2017 oferecendo soluções completas em
+        Paisagismo, Manejo Ambiental,
+        Jardins Verticais e Plantio de Árvores,
+        sempre com responsabilidade,
+        segurança e compromisso com o meio ambiente.
+      </p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5511947882608?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          Solicitar orçamento
+        </a>
+        <a href="#servicos" class="btn-secondary">
+          Conheça nossos serviços
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INFORMAÇÕES ================= -->
+<section class="info-bar">
+  <div class="container">
+    <div class="info-item">
+      <i class="fas fa-calendar-check"></i>
+      <div>
+        <h3>Desde 2017</h3>
+        <p>Experiência em soluções ambientais.</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-tree"></i>
+      <div>
+        <h3>Manejo Ambiental</h3>
+        <p>Projetos executados com segurança.</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-seedling"></i>
+      <div>
+        <h3>Paisagismo</h3>
+        <p>Projetos sustentáveis para todos os espaços.</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-user-shield"></i>
+      <div>
+        <h3>Responsabilidade Técnica</h3>
+        <p>Engenheiro Agrônomo e equipe NR-35.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section class="about" id="sobre">
+  <div class="container about-container">
+    <div class="about-image">
+      <img src="assets/img/imagem-empresa.jpg" alt="GG Project Paisagismo" loading="lazy">
+    </div>
+    <div class="about-text">
+      <span>QUEM SOMOS</span>
+      <h2>
+        Soluções ambientais
+        que unem experiência,
+        sustentabilidade e qualidade.
+      </h2>
+      <p>
+        A <strong>GG Project</strong> atua desde 2017 oferecendo
+        soluções completas para condomínios, empresas,
+        colégios, órgãos públicos e clientes particulares.
+      </p>
+      <p>
+        Nosso compromisso é desenvolver projetos ambientais
+        responsáveis, respeitando todas as normas vigentes,
+        conciliando preservação da natureza,
+        segurança e eficiência.
+      </p>
+      <div class="about-list">
+        <div><i class="fas fa-check-circle"></i> Desde 2017 no mercado</div>
+        <div><i class="fas fa-check-circle"></i> Equipe especializada</div>
+        <div><i class="fas fa-check-circle"></i> Atendimento em São Paulo e Jundiaí</div>
+        <div><i class="fas fa-check-circle"></i> Soluções sustentáveis</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MISSÃO ================= -->
+<section class="mission">
+  <div class="container">
+    <div class="section-title">
+      <span>NOSSA MISSÃO</span>
+      <h2>
+        Plantando qualidade,
+        construindo um futuro sustentável.
+      </h2>
+    </div>
+    <div class="mission-content">
+      <div class="mission-card">
+        <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Missão</h3>
+        <p>
+          Promover soluções ambientais que aliem
+          responsabilidade, inovação e educação,
+          aproximando as pessoas da natureza e
+          contribuindo para um futuro sustentável.
+        </p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon"><i class="fas fa-eye"></i></div>
+        <h3>Visão</h3>
+        <p>
+          Ser referência em paisagismo e manejo
+          ambiental, oferecendo serviços de alta
+          qualidade com compromisso ambiental.
+        </p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon"><i class="fas fa-leaf"></i></div>
+        <h3>Valores</h3>
+        <p>
+          Ética, transparência, sustentabilidade,
+          respeito ao meio ambiente,
+          segurança e excelência em cada projeto.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-title">
+      <span>O QUE FAZEMOS</span>
+      <h2>
+        Soluções completas para
+        transformar qualquer ambiente.
+      </h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-tree"></i>
+        <h3>Manejo Ambiental</h3>
+        <p>Planejamento e execução de podas, remoções de árvores e licenciamentos, seguindo todas as normas ambientais.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Jardins Verticais</h3>
+        <p>Implantação de jardins verticais com ou sem irrigação automática, valorizando qualquer ambiente.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tree-city"></i>
+        <h3>Paisagismo</h3>
+        <p>Desenvolvimento de projetos paisagísticos para empresas, condomínios, residências e áreas públicas.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tree"></i>
+        <h3>Plantio de Árvores</h3>
+        <p>Plantio de espécies adequadas para recuperação ambiental e valorização dos espaços.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-book-open"></i>
+        <h3>Educação Ambiental</h3>
+        <p>Projetos educativos voltados para conscientização ambiental e preservação da natureza.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-user-shield"></i>
+        <h3>Responsabilidade Técnica</h3>
+        <p>Acompanhamento por Engenheiro Agrônomo, garantindo segurança e conformidade em todos os serviços.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIFERENCIAIS ================= -->
+<section class="differentials">
+  <div class="container">
+    <div class="section-title">
+      <span>POR QUE ESCOLHER A GG PROJECT?</span>
+      <h2>
+        Compromisso com a natureza,
+        qualidade e segurança.
+      </h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-award"></i>
+        <h3>Qualidade</h3>
+        <p>Trabalhamos com materiais de qualidade, equipe especializada e acabamento profissional.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-shield-heart"></i>
+        <h3>Segurança</h3>
+        <p>Todos os serviços são executados seguindo normas técnicas e de segurança.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Sustentabilidade</h3>
+        <p>Buscamos sempre reduzir impactos ambientais e preservar a natureza.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-users"></i>
+        <h3>Atendimento</h3>
+        <p>Atendimento personalizado para empresas, condomínios e clientes particulares.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NÚMEROS DA EMPRESA ================= -->
+<section class="numbers">
+  <div class="container">
+    <div class="stats">
+      <div class="stat-box"><h2>2017</h2><p>Início das atividades</p></div>
+      <div class="stat-box"><h2>100%</h2><p>Compromisso com a qualidade</p></div>
+      <div class="stat-box"><h2>NR-35</h2><p>Equipe capacitada</p></div>
+      <div class="stat-box"><h2>SP</h2><p>Atendimento em São Paulo e região</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERIA ================= -->
+<section class="projects" id="galeria">
+  <div class="container">
+    <div class="section-title">
+      <span>NOSSOS PROJETOS</span>
+      <h2>Alguns trabalhos realizados pela GG Project</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project">
+        <img src="assets/img/paisagismo.jpg" alt="Paisagismo" loading="lazy">
+        <div class="project-info"><h3>Paisagismo</h3><span>Projetos residenciais e corporativos</span></div>
+      </div>
+      <div class="project">
+        <!-- FIX: nome do arquivo tinha erro de digitação ("verdical" -> "vertical") -->
+        <img src="assets/img/jardim-vertical.jpg" alt="Jardim Vertical" loading="lazy">
+        <div class="project-info"><h3>Jardins Verticais</h3><span>Ambientes modernos e sustentáveis</span></div>
+      </div>
+      <div class="project">
+        <!-- FIX: "Plantil.jpg" -> "plantio.jpg" -->
+        <img src="assets/img/plantio.jpg" alt="Plantio" loading="lazy">
+        <div class="project-info"><h3>Plantio de Árvores</h3><span>Recuperação e valorização ambiental</span></div>
+      </div>
+      <div class="project">
+        <img src="assets/img/poda.jpg" alt="Poda" loading="lazy">
+        <div class="project-info"><h3>Manejo Ambiental</h3><span>Podas e remoções especializadas</span></div>
+      </div>
+      <div class="project">
+        <img src="assets/img/area-verde.jpeg" alt="Área Verde" loading="lazy">
+        <div class="project-info"><h3>Áreas Verdes</h3><span>Condomínios e empresas</span></div>
+      </div>
+      <div class="project">
+        <img src="assets/img/educacao-ambiental.jpg" alt="Educação Ambiental" loading="lazy">
+        <div class="project-info"><h3>Educação Ambiental</h3><span>Projetos educativos e sociais</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EMPRESAS PARCEIRAS ================= -->
+<section class="partners" id="partners">
+  <div class="container">
+    <div class="section-title">
+      <span>QUEM CONFIA EM NOSSO TRABALHO</span>
+      <h2>Empresas Parceiras</h2>
+      <p>
+        Temos orgulho de colaborar com empresas e instituições
+        que compartilham nosso compromisso com a qualidade,
+        sustentabilidade e responsabilidade ambiental.
+      </p>
+    </div>
+    <!-- FIX: alt genérico ("Parceiro 1"...) trocado pelo nome real de cada
+         empresa — ajuda acessibilidade e SEO. Ajuste os nomes se algum estiver
+         diferente do real. -->
+    <div class="partners-grid">
+      <div class="partner"><img src="assets/img/agrotexas.png" alt="Agrotexas" loading="lazy"></div>
+      <div class="partner"><img src="assets/img/jp-poda-de-arvore.png" alt="JP Poda de Árvore" loading="lazy"></div>
+      <div class="partner"><img src="assets/img/arboredo.jpg" alt="Arboredo" loading="lazy"></div>
+      <div class="partner"><img src="assets/img/sao-lourenco-paisagismo.jpg" alt="São Lourenço Paisagismo" loading="lazy"></div>
+      <div class="partner"><img src="assets/img/jd-paisagismo-e-servicos.png" alt="JD Paisagismo e Serviços" loading="lazy"></div>
+      <div class="partner"><img src="assets/img/hanazaki.jpg" alt="Hanazaki" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUEM ATENDEMOS ================= -->
+<section class="clients">
+  <div class="container">
+    <div class="section-title">
+      <span>ATENDEMOS</span>
+      <h2>Levamos soluções ambientais para diversos segmentos</h2>
+    </div>
+    <div class="clients-grid">
+      <div class="client-card"><i class="fas fa-building"></i><h3>Empresas</h3></div>
+      <div class="client-card"><i class="fas fa-city"></i><h3>Condomínios</h3></div>
+      <div class="client-card"><i class="fas fa-house"></i><h3>Residências</h3></div>
+      <div class="client-card"><i class="fas fa-school"></i><h3>Escolas</h3></div>
+      <div class="client-card"><i class="fas fa-landmark"></i><h3>Órgãos Públicos</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="section-title">
+      <span>FALE CONOSCO</span>
+      <h2>Vamos conversar sobre seu projeto</h2>
+      <p>Entre em contato conosco e solicite um orçamento sem compromisso.</p>
+    </div>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-card">
+          <i class="fab fa-whatsapp"></i>
+          <h3>WhatsApp</h3>
+          <p>(11) 94788-2608</p>
+          <a href="https://wa.me/5511947882608?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Conversar agora</a>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-instagram"></i>
+          <h3>Instagram</h3>
+          <p>@ggproject.br</p>
+          <a href="https://www.instagram.com/ggproject.br/" target="_blank" rel="noopener noreferrer">Acessar perfil</a>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <h3>E-mail</h3>
+          <p>gg.agro@gmail.com</p>
+          <a href="mailto:gg.agro@gmail.com">Enviar e-mail</a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <!-- FIX: o formulário agora tem "name" nos campos (necessário para
+             qualquer serviço de envio) e um id para o JS conseguir capturar
+             os campos certos. O envio real (fetch) está em script.js —
+             troque a URL de exemplo por um endpoint de verdade (Formspree,
+             Web3Forms, EmailJS, ou seu próprio backend). -->
+        <form id="form-contato">
+          <input type="text" name="nome" placeholder="Nome" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="tel" name="telefone" placeholder="Telefone">
+          <input type="text" name="empresa" placeholder="Empresa (Opcional)">
+          <textarea name="mensagem" rows="6" placeholder="Conte um pouco sobre o seu projeto"></textarea>
+          <button type="submit" class="btn-primary">Solicitar orçamento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAPA (opcional) =================
+<section class="map">
+  <iframe
+    src="https://www.google.com/maps?q=Jundiaí+SP&output=embed"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</section>
+================================================== -->
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-logo">
+      <img src="assets/img/logo-gg.png" alt="GG Project" loading="lazy">
+      <p>Soluções em Paisagismo, Manejo Ambiental, Jardins Verticais, Plantio de Árvores e Educação Ambiental.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Serviços</h3>
+      <ul>
+        <li>Paisagismo</li>
+        <li>Manejo Ambiental</li>
+        <li>Jardins Verticais</li>
+        <li>Plantio de Árvores</li>
+        <li>Educação Ambiental</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contato</h3>
+      <ul class="footer-contact">
+        <li><i class="fab fa-whatsapp"></i> (11) 94788-2608</li>
+        <li><i class="fab fa-instagram"></i> @ggproject.br</li>
+        <li><i class="fas fa-envelope"></i> gg.agro@gmail.com</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Atendimento</h3>
+      <p>São Paulo<br>Jundiaí<br>Região Metropolitana</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <!-- FIX: agora usa a classe "current-year" que o script.js já atualizava,
+         mas que não existia no HTML original (ano ficava travado em "2026"). -->
+    © <span class="current-year">2026</span> GG Project - Todos os direitos reservados.
+    <br><br>
+    <strong>Plantando Qualidade.</strong>
+  </div>
+</footer>
+
+<a href="https://wa.me/5511947882608?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" class="whatsapp" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<a href="#inicio" class="back-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+
+</body>
+</html>
